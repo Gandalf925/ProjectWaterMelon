@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 2117676257048285195}
   - component: {fileID: 6991635798791251647}
   - component: {fileID: 4558820429509690605}
-  - component: {fileID: 4348750263190137592}
   - component: {fileID: 1136394538347089055}
+  - component: {fileID: 2108821795520014381}
+  - component: {fileID: 5467345542220501317}
   m_Layer: 0
   m_Name: bubble_orange
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 0.09, y: 0.09, z: 0.06662}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -8260814369363090705, guid: 2b5c2913b08f46342838f80c9929a140, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c7172c2a57d4eed42af26556e496240c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +117,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &4348750263190137592
+--- !u!114 &1136394538347089055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204595845819576593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a95e86379a7164d8397d37f55b5ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleSceneDirector: {fileID: 0}
+  colorType: 0
+  isMerged: 0
+  rotating: 0
+--- !u!58 &2108821795520014381
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,21 +167,41 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.49596772
---- !u!114 &1136394538347089055
-MonoBehaviour:
+  m_Offset: {x: -0.873008, y: -1.0185069}
+  m_Radius: 7.6114855
+--- !u!58 &5467345542220501317
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5204595845819576593}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62a95e86379a7164d8397d37f55b5ccd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleSceneDirector: {fileID: 0}
-  colorType: 0
-  isMerged: 0
-  rotating: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 2.8615203, y: -1.3580103}
+  m_Radius: 6.2534733

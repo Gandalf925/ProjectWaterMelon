@@ -15,17 +15,28 @@ public class PuzzleSceneDirector : MonoBehaviour
     BubbleController currentBubble;
     const float spawnItemY = 3.5f;
     AudioSource audioSource;
+    bool isStart = false;
+
+    [SerializeField] private GameObject TitlePanel;
+
+    public void StartGame()
+    {
+        TitlePanel.SetActive(false);
+        isStart = true;
+        StartCoroutine(SpawnCurrentBubble());
+    }
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
 
         gameOverPanel.SetActive(false);
-        StartCoroutine(SpawnCurrentBubble());
+        TitlePanel.SetActive(true);
     }
 
     private void Update()
     {
+        if (!isStart) return;
         if (!currentBubble) return;
 
         currentBubble.rotating = true;
@@ -102,7 +113,7 @@ public class PuzzleSceneDirector : MonoBehaviour
         Destroy(bubbleA.gameObject);
         Destroy(bubbleB.gameObject);
 
-        score += newBubble.colorType * 20;
+        score += newBubble.colorType * 8300;
         scoreText.text = $"Score: {score}";
 
         audioSource.PlayOneShot(seMerge);

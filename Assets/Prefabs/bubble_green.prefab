@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 2117676257048285195}
   - component: {fileID: 6991635798791251647}
   - component: {fileID: 4558820429509690605}
-  - component: {fileID: 4348750263190137592}
   - component: {fileID: -1139367560837769674}
+  - component: {fileID: 1390859469348662504}
+  - component: {fileID: 4226717164715272863}
+  - component: {fileID: 8179947914488704007}
   m_Layer: 0
   m_Name: bubble_green
   m_TagString: Untagged
@@ -30,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.7, y: 3.7, z: 1}
+  m_LocalScale: {x: 0.19828495, y: 0.19828495, z: 0.053590532}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 9113640945991482476, guid: fdbccf9edb478ef4dbc4211723ab5597, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ff1ab64f83fb1f6469b9e0b54990767c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -116,7 +118,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &4348750263190137592
+--- !u!114 &-1139367560837769674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204595845819576593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a95e86379a7164d8397d37f55b5ccd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  puzzleSceneDirector: {fileID: 0}
+  colorType: 0
+  isMerged: 0
+  rotating: 0
+--- !u!58 &1390859469348662504
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,21 +168,78 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.49596772
---- !u!114 &-1139367560837769674
-MonoBehaviour:
+  m_Offset: {x: -2.439099, y: 0}
+  m_Radius: 7.1609015
+--- !u!58 &4226717164715272863
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5204595845819576593}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62a95e86379a7164d8397d37f55b5ccd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  puzzleSceneDirector: {fileID: 0}
-  colorType: 0
-  isMerged: 0
-  rotating: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 2.4707747, y: 0}
+  m_Radius: 7.129225
+--- !u!70 &8179947914488704007
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204595845819576593}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.38012072, y: -0.30517492}
+  m_Size: {x: 7.669738, y: 14.775025}
+  m_Direction: 0
